@@ -1,29 +1,56 @@
-# smart-store-trentrueckert
+# smart-sales-starter-files
 
-## Project Process
+Starter files to initialize the smart sales project.
 
+-----
+
+## Project Setup Guide (Windows)
+
+Run all commands from a PowerShell terminal in the root project folder.
+
+### Step 2A - Create a Local Project Virtual Environment
+
+```shell
+py -m venv .venv
 ```
-1. Create a GitHub repository with README.md
-2. Clone the repository
-3. Open the repository in VS Code
-4. Add a .gitignore file
-5. Add a requirements.txt file
-6. Open a terminal
-7. Create and activate a .venv file
-8. Edit the README.md
-9. Add the files, commit them, push them to GitHub
-10. Verify the GitHub repository
+
+### Step 2B - Activate the Virtual Environment
+
+```shell
+.venv\Scripts\activate
 ```
 
-## Project Questions
+### Step 2C - Install Packages
 
-* Most common customer location?
-* Highest/lowest product price?
-* Estimate: Avg, Min, Max sales?
-* Any data issues?
-
-## Running the Analysis file
-
+```shell
+py -m pip install --upgrade -r requirements.txt
 ```
-py -m initial_analysis
+
+### Step 2D - Optional: Verify .venv Setup
+
+```shell
+py -m datafun_venv_checker.venv_checker
 ```
+
+### Step 2E - Run the initial project script
+
+```shell
+py scripts/data_prep.py
+```
+
+-----
+
+## Initial Package List
+
+- pip
+- loguru
+- ipykernel
+- jupyterlab
+- numpy
+- pandas
+- matplotlib
+- seaborn
+- plotly
+- pyspark==4.0.0.dev1
+- pyspark[sql]
+- git+https://github.com/denisecase/datafun-venv-checker.git#egg=datafun_venv_checker
