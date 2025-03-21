@@ -1,0 +1,5 @@
+2025-03-21 00:52:37.263 | INFO     | __main__:main:41 - Starting data preparation...
+2025-03-21 00:52:37.263 | INFO     | __main__:read_raw_data:26 - Reading raw data from C:\Users\trent\Projects\smart-store-trentrueckert\data\raw\customers_data.csv.
+2025-03-21 00:52:37.275 | INFO     | __main__:read_raw_data:26 - Reading raw data from C:\Users\trent\Projects\smart-store-trentrueckert\data\raw\products_data.csv.
+2025-03-21 00:52:37.279 | INFO     | __main__:read_raw_data:26 - Reading raw data from C:\Users\trent\Projects\smart-store-trentrueckert\data\raw\sales_data.csv.
+2025-03-21 00:52:37.289 | INFO     | __main__:main:45 - Data preparation complete.
