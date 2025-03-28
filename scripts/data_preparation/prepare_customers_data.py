@@ -90,7 +90,7 @@ def remove_outliers(df: pd.DataFrame) -> pd.DataFrame:
     logger.info(f"FUNCTION START: remove_outliers with dataframe shape={df.shape}")
     initial_count = len(df)
 
-    df = df[(df['LastActiveYear'] >= 2021) & (df['LastActiveYear'] <= 2025)]
+    df = df[(df['LastActiveYear'] >= 2020) & (df['LastActiveYear'] <= 2025)]
     
     removed_count = initial_count - len(df)
     logger.info(f"Removed {removed_count} outlier rows")
