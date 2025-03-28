@@ -3,3 +3,125 @@
 2025-03-21 00:52:37.275 | INFO     | __main__:read_raw_data:26 - Reading raw data from C:\Users\trent\Projects\smart-store-trentrueckert\data\raw\products_data.csv.
 2025-03-21 00:52:37.279 | INFO     | __main__:read_raw_data:26 - Reading raw data from C:\Users\trent\Projects\smart-store-trentrueckert\data\raw\sales_data.csv.
 2025-03-21 00:52:37.289 | INFO     | __main__:main:45 - Data preparation complete.
+2025-03-27 23:48:01.866 | INFO     | __main__:main:154 - ==================================
+2025-03-27 23:48:01.867 | INFO     | __main__:main:155 - STARTING prepare_customers_data.py
+2025-03-27 23:48:01.867 | INFO     | __main__:main:156 - ==================================
+2025-03-27 23:48:01.868 | INFO     | __main__:main:158 - Root project folder: C:\Users\trent\Projects\smart-store-trentrueckert
+2025-03-27 23:48:01.868 | INFO     | __main__:main:159 - data / raw folder: C:\Users\trent\Projects\smart-store-trentrueckert\data\raw
+2025-03-27 23:48:01.868 | INFO     | __main__:main:160 - data / prepared folder: C:\Users\trent\Projects\smart-store-trentrueckert\data\prepared
+2025-03-27 23:48:01.869 | INFO     | __main__:main:161 - scripts folder: C:\Users\trent\Projects\smart-store-trentrueckert\scripts
+2025-03-27 23:48:01.869 | INFO     | __main__:read_raw_data:60 - FUNCTION START: read_raw_data with file_name=customers_data.csv
+2025-03-27 23:48:01.869 | INFO     | __main__:read_raw_data:62 - Reading data from C:\Users\trent\Projects\smart-store-trentrueckert\data\raw\customers_data.csv
+2025-03-27 23:48:01.882 | INFO     | __main__:read_raw_data:64 - Loaded dataframe with 11 rows and 6 columns
+2025-03-27 23:48:01.883 | INFO     | __main__:main:170 - Initial dataframe columns: CustomerID, Name, Region, JoinDate, LastActiveYear, PreferredContactMethod
+2025-03-27 23:48:01.884 | INFO     | __main__:main:171 - Initial dataframe shape: (11, 6)
+2025-03-27 23:48:01.887 | INFO     | __main__:remove_duplicates:92 - FUNCTION START: remove_duplicates with dataframe shape=(11, 6)
+2025-03-27 23:48:01.894 | INFO     | __main__:remove_duplicates:96 - Removed 0 duplicate rows
+2025-03-27 23:48:01.894 | INFO     | __main__:remove_duplicates:97 - 11 records remaining after removing duplicates.
+2025-03-27 23:48:01.895 | INFO     | __main__:handle_missing_values:111 - FUNCTION START: handle_missing_values with dataframe shape=(11, 6)
+2025-03-27 23:48:01.896 | INFO     | __main__:handle_missing_values:115 - Total missing values before handling: 0
+2025-03-27 23:48:01.904 | INFO     | __main__:handle_missing_values:122 - Total missing values after handling: 0
+2025-03-27 23:48:01.905 | INFO     | __main__:handle_missing_values:123 - 11 records remaining after handling missing values.
+2025-03-27 23:48:01.908 | INFO     | __main__:remove_outliers:137 - FUNCTION START: remove_outliers with dataframe shape=(11, 6)
+2025-03-27 23:48:01.914 | INFO     | __main__:remove_outliers:145 - Removed 1 outlier rows
+2025-03-27 23:48:01.918 | INFO     | __main__:remove_outliers:146 - 10 records remaining after removing outliers.
+2025-03-27 23:48:01.919 | INFO     | __main__:save_prepared_data:75 - FUNCTION START: save_prepared_data with file_name=customers_data_prepared.csv, dataframe shape=(10, 6)
+2025-03-27 23:49:59.476 | INFO     | __main__:main:154 - ==================================
+2025-03-27 23:49:59.476 | INFO     | __main__:main:155 - STARTING prepare_customers_data.py
+2025-03-27 23:49:59.477 | INFO     | __main__:main:156 - ==================================
+2025-03-27 23:49:59.477 | INFO     | __main__:main:158 - Root project folder: C:\Users\trent\Projects\smart-store-trentrueckert
+2025-03-27 23:49:59.477 | INFO     | __main__:main:159 - data / raw folder: C:\Users\trent\Projects\smart-store-trentrueckert\data\raw
+2025-03-27 23:49:59.478 | INFO     | __main__:main:160 - data / prepared folder: C:\Users\trent\Projects\smart-store-trentrueckert\data\prepared
+2025-03-27 23:49:59.478 | INFO     | __main__:main:161 - scripts folder: C:\Users\trent\Projects\smart-store-trentrueckert\scripts
+2025-03-27 23:49:59.478 | INFO     | __main__:read_raw_data:60 - FUNCTION START: read_raw_data with file_name=customers_data.csv
+2025-03-27 23:49:59.479 | INFO     | __main__:read_raw_data:62 - Reading data from C:\Users\trent\Projects\smart-store-trentrueckert\data\raw\customers_data.csv
+2025-03-27 23:49:59.483 | INFO     | __main__:read_raw_data:64 - Loaded dataframe with 11 rows and 6 columns
+2025-03-27 23:49:59.483 | INFO     | __main__:main:170 - Initial dataframe columns: CustomerID, Name, Region, JoinDate, LastActiveYear, PreferredContactMethod
+2025-03-27 23:49:59.484 | INFO     | __main__:main:171 - Initial dataframe shape: (11, 6)
+2025-03-27 23:49:59.497 | INFO     | __main__:remove_duplicates:92 - FUNCTION START: remove_duplicates with dataframe shape=(11, 6)
+2025-03-27 23:49:59.499 | INFO     | __main__:remove_duplicates:96 - Removed 0 duplicate rows
+2025-03-27 23:49:59.499 | INFO     | __main__:remove_duplicates:97 - 11 records remaining after removing duplicates.
+2025-03-27 23:49:59.500 | INFO     | __main__:handle_missing_values:111 - FUNCTION START: handle_missing_values with dataframe shape=(11, 6)
+2025-03-27 23:49:59.501 | INFO     | __main__:handle_missing_values:115 - Total missing values before handling: 0
+2025-03-27 23:49:59.504 | INFO     | __main__:handle_missing_values:122 - Total missing values after handling: 0
+2025-03-27 23:49:59.505 | INFO     | __main__:handle_missing_values:123 - 11 records remaining after handling missing values.
+2025-03-27 23:49:59.513 | INFO     | __main__:remove_outliers:137 - FUNCTION START: remove_outliers with dataframe shape=(11, 6)
+2025-03-27 23:49:59.516 | INFO     | __main__:remove_outliers:145 - Removed 1 outlier rows
+2025-03-27 23:49:59.516 | INFO     | __main__:remove_outliers:146 - 10 records remaining after removing outliers.
+2025-03-27 23:49:59.517 | INFO     | __main__:save_prepared_data:75 - FUNCTION START: save_prepared_data with file_name=customers_data_prepared.csv, dataframe shape=(10, 6)
+2025-03-27 23:56:44.989 | INFO     | __main__:main:102 - ==================================
+2025-03-27 23:56:44.989 | INFO     | __main__:main:103 - STARTING prepare_customers_data.py
+2025-03-27 23:56:44.990 | INFO     | __main__:main:104 - ==================================
+2025-03-27 23:56:44.990 | INFO     | __main__:main:106 - Root project folder: C:\Users\trent\Projects\smart-store-trentrueckert
+2025-03-27 23:56:44.990 | INFO     | __main__:main:107 - data / raw folder: C:\Users\trent\Projects\smart-store-trentrueckert\data\raw
+2025-03-27 23:56:44.991 | INFO     | __main__:main:108 - data / prepared folder: C:\Users\trent\Projects\smart-store-trentrueckert\data\prepared
+2025-03-27 23:56:44.991 | INFO     | __main__:main:109 - scripts folder: C:\Users\trent\Projects\smart-store-trentrueckert\scripts
+2025-03-27 23:56:44.991 | INFO     | __main__:read_raw_data:51 - FUNCTION START: read_raw_data with file_name=customers_data.csv
+2025-03-27 23:56:44.992 | INFO     | __main__:read_raw_data:53 - Reading data from C:\Users\trent\Projects\smart-store-trentrueckert\data\raw\customers_data.csv
+2025-03-27 23:56:44.996 | INFO     | __main__:read_raw_data:55 - Loaded dataframe with 11 rows and 6 columns
+2025-03-27 23:56:44.996 | INFO     | __main__:main:115 - Initial dataframe columns: CustomerID, Name, Region, JoinDate, LastActiveYear, PreferredContactMethod
+2025-03-27 23:56:44.996 | INFO     | __main__:main:116 - Initial dataframe shape: (11, 6)
+2025-03-27 23:56:45.000 | INFO     | __main__:remove_duplicates:65 - FUNCTION START: remove_duplicates with dataframe shape=(11, 6)
+2025-03-27 23:56:45.001 | INFO     | __main__:remove_duplicates:69 - Removed 0 duplicate rows
+2025-03-27 23:56:45.003 | INFO     | __main__:remove_duplicates:70 - 11 records remaining after removing duplicates.
+2025-03-27 23:56:45.004 | INFO     | __main__:handle_missing_values:74 - FUNCTION START: handle_missing_values with dataframe shape=(11, 6)
+2025-03-27 23:56:45.005 | INFO     | __main__:handle_missing_values:78 - Total missing values before handling: 0
+2025-03-27 23:56:45.007 | INFO     | __main__:handle_missing_values:85 - Total missing values after handling: 0
+2025-03-27 23:56:45.008 | INFO     | __main__:handle_missing_values:86 - 11 records remaining after handling missing values.
+2025-03-27 23:56:45.009 | INFO     | __main__:remove_outliers:90 - FUNCTION START: remove_outliers with dataframe shape=(11, 6)
+2025-03-27 23:56:45.010 | INFO     | __main__:remove_outliers:96 - Removed 1 outlier rows
+2025-03-27 23:56:45.011 | INFO     | __main__:remove_outliers:97 - 10 records remaining after removing outliers.
+2025-03-27 23:56:45.011 | INFO     | __main__:save_prepared_data:59 - FUNCTION START: save_prepared_data with file_name=customers_data_prepared.csv, dataframe shape=(10, 6)
+2025-03-27 23:59:53.831 | INFO     | __main__:main:102 - ==================================
+2025-03-27 23:59:53.832 | INFO     | __main__:main:103 - STARTING prepare_customers_data.py
+2025-03-27 23:59:53.832 | INFO     | __main__:main:104 - ==================================
+2025-03-27 23:59:53.832 | INFO     | __main__:main:106 - Root project folder: C:\Users\trent\Projects\smart-store-trentrueckert
+2025-03-27 23:59:53.833 | INFO     | __main__:main:107 - data / raw folder: C:\Users\trent\Projects\smart-store-trentrueckert\data\raw
+2025-03-27 23:59:53.833 | INFO     | __main__:main:108 - data / prepared folder: C:\Users\trent\Projects\smart-store-trentrueckert\data\prepared
+2025-03-27 23:59:53.833 | INFO     | __main__:main:109 - scripts folder: C:\Users\trent\Projects\smart-store-trentrueckert\scripts
+2025-03-27 23:59:53.834 | INFO     | __main__:read_raw_data:51 - FUNCTION START: read_raw_data with file_name=customers_data.csv
+2025-03-27 23:59:53.834 | INFO     | __main__:read_raw_data:53 - Reading data from C:\Users\trent\Projects\smart-store-trentrueckert\data\raw\customers_data.csv
+2025-03-27 23:59:53.838 | INFO     | __main__:read_raw_data:55 - Loaded dataframe with 11 rows and 6 columns
+2025-03-27 23:59:53.838 | INFO     | __main__:main:115 - Initial dataframe columns: CustomerID, Name, Region, JoinDate, LastActiveYear, PreferredContactMethod
+2025-03-27 23:59:53.839 | INFO     | __main__:main:116 - Initial dataframe shape: (11, 6)
+2025-03-27 23:59:53.841 | INFO     | __main__:remove_duplicates:65 - FUNCTION START: remove_duplicates with dataframe shape=(11, 6)
+2025-03-27 23:59:53.843 | INFO     | __main__:remove_duplicates:69 - Removed 0 duplicate rows
+2025-03-27 23:59:53.844 | INFO     | __main__:remove_duplicates:70 - 11 records remaining after removing duplicates.
+2025-03-27 23:59:53.845 | INFO     | __main__:handle_missing_values:74 - FUNCTION START: handle_missing_values with dataframe shape=(11, 6)
+2025-03-27 23:59:53.854 | INFO     | __main__:handle_missing_values:78 - Total missing values before handling: 0
+2025-03-27 23:59:53.857 | INFO     | __main__:handle_missing_values:85 - Total missing values after handling: 0
+2025-03-27 23:59:53.857 | INFO     | __main__:handle_missing_values:86 - 11 records remaining after handling missing values.
+2025-03-27 23:59:53.858 | INFO     | __main__:remove_outliers:90 - FUNCTION START: remove_outliers with dataframe shape=(11, 6)
+2025-03-27 23:59:53.859 | INFO     | __main__:remove_outliers:96 - Removed 1 outlier rows
+2025-03-27 23:59:53.859 | INFO     | __main__:remove_outliers:97 - 10 records remaining after removing outliers.
+2025-03-27 23:59:53.860 | INFO     | __main__:save_prepared_data:59 - FUNCTION START: save_prepared_data with file_name=customers_data_prepared.csv, dataframe shape=(10, 6)
+2025-03-27 23:59:53.864 | INFO     | __main__:save_prepared_data:62 - Data saved to C:\Users\trent\Projects\smart-store-trentrueckert\data\prepared\customers_data_prepared.csv
+2025-03-27 23:59:53.870 | INFO     | __main__:main:139 - ==================================
+2025-03-27 23:59:53.871 | INFO     | __main__:main:140 - FINISHED prepare_customers_data.py
+2025-03-27 23:59:53.872 | INFO     | __main__:main:141 - ==================================
+2025-03-28 00:00:31.908 | INFO     | __main__:main:55 - Starting prepare_sales_data.py
+2025-03-28 00:00:31.909 | INFO     | __main__:read_raw_data:22 - Reading data from C:\Users\trent\Projects\smart-store-trentrueckert\data\raw\products_data.csv
+2025-03-28 00:00:31.913 | INFO     | __main__:read_raw_data:24 - Loaded 8 rows, 6 columns
+2025-03-28 00:00:31.914 | INFO     | __main__:remove_duplicates:35 - Removed 0 duplicates
+2025-03-28 00:00:31.918 | INFO     | __main__:handle_missing_values:40 - Handled missing values: 0 remaining
+2025-03-28 00:00:31.920 | INFO     | __main__:remove_outliers:46 - Removed 0 outliers in DiscountPercent
+2025-03-28 00:00:31.922 | INFO     | __main__:standardize_formats:51 - Standardized formats
+2025-03-28 00:00:31.928 | INFO     | __main__:save_prepared_data:30 - Saved to C:\Users\trent\Projects\smart-store-trentrueckert\data\prepared\products_data_prepared.csv
+2025-03-28 00:00:31.928 | INFO     | __main__:main:65 - Finished prepare_products_data.py
+2025-03-28 00:00:48.941 | INFO     | __main__:main:56 - Starting prepare_sales_data.py
+2025-03-28 00:00:48.942 | INFO     | __main__:read_raw_data:22 - Reading data from C:\Users\trent\Projects\smart-store-trentrueckert\data\raw\sales_data.csv
+2025-03-28 00:00:48.948 | INFO     | __main__:read_raw_data:24 - Loaded 94 rows, 9 columns
+2025-03-28 00:00:48.950 | INFO     | __main__:remove_duplicates:35 - Removed 0 duplicates
+2025-03-28 00:00:48.951 | INFO     | __main__:handle_missing_values:40 - Handled missing values: 0 remaining
+2025-03-28 00:00:48.954 | INFO     | __main__:remove_outliers:46 - Removed 0 outliers in DiscountPercent
+2025-03-28 00:00:48.965 | INFO     | __main__:standardize_formats:52 - Standardized formats
+2025-03-28 00:00:48.966 | INFO     | __main__:main:65 - Finished prepare_sales_data.py
+2025-03-28 00:01:56.186 | INFO     | __main__:main:56 - Starting prepare_sales_data.py
+2025-03-28 00:01:56.187 | INFO     | __main__:read_raw_data:22 - Reading data from C:\Users\trent\Projects\smart-store-trentrueckert\data\raw\sales_data.csv
+2025-03-28 00:01:56.192 | INFO     | __main__:read_raw_data:24 - Loaded 94 rows, 9 columns
+2025-03-28 00:01:56.193 | INFO     | __main__:remove_duplicates:35 - Removed 0 duplicates
+2025-03-28 00:01:56.196 | INFO     | __main__:handle_missing_values:40 - Handled missing values: 0 remaining
+2025-03-28 00:01:56.197 | INFO     | __main__:remove_outliers:46 - Removed 0 outliers in DiscountPercent
+2025-03-28 00:01:56.205 | INFO     | __main__:standardize_formats:52 - Standardized formats
+2025-03-28 00:01:56.212 | INFO     | __main__:save_prepared_data:30 - Saved to C:\Users\trent\Projects\smart-store-trentrueckert\data\prepared\sales_data_prepared.csv
+2025-03-28 00:01:56.213 | INFO     | __main__:main:66 - Finished prepare_sales_data.py

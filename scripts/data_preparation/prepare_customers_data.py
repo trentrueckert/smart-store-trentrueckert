@@ -48,15 +48,6 @@ PREPARED_DATA_DIR: pathlib.Path = DATA_DIR.joinpath("prepared")
 # -------------------
 
 def read_raw_data(file_name: str) -> pd.DataFrame:
-    """
-    Read raw data from CSV.
-
-    Args:
-        file_name (str): Name of the CSV file to read.
-    
-    Returns:
-        pd.DataFrame: Loaded DataFrame.
-    """
     logger.info(f"FUNCTION START: read_raw_data with file_name={file_name}")
     file_path = RAW_DATA_DIR.joinpath(file_name)
     logger.info(f"Reading data from {file_path}")
@@ -65,30 +56,12 @@ def read_raw_data(file_name: str) -> pd.DataFrame:
     return df
 
 def save_prepared_data(df: pd.DataFrame, file_name: str) -> None:
-    """
-    Save cleaned data to CSV.
-
-    Args:
-        df (pd.DataFrame): Cleaned DataFrame.
-        file_name (str): Name of the output file.
-    """
     logger.info(f"FUNCTION START: save_prepared_data with file_name={file_name}, dataframe shape={df.shape}")
     file_path = PREPARED_DATA_DIR.joinpath(file_name)
     df.to_csv(file_path, index=False)
     logger.info(f"Data saved to {file_path}")
 
 def remove_duplicates(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Remove duplicate rows from the DataFrame.
-    How do you decide if a row is duplicated?
-    Which do you keep? Which do you delete?
-
-    Args:
-        df (pd.DataFrame): Input DataFrame.
-    
-    Returns:
-        pd.DataFrame: DataFrame with duplicates removed.
-    """
     logger.info(f"FUNCTION START: remove_duplicates with dataframe shape={df.shape}")
     initial_count = len(df)
     df = df.drop_duplicates(subset=['CustomerID'], keep='first')
@@ -98,16 +71,6 @@ def remove_duplicates(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Handle missing values by filling or dropping.
-    This logic is specific to the actual data and business rules.
-
-    Args:
-        df (pd.DataFrame): Input DataFrame.
-    
-    Returns:
-        pd.DataFrame: DataFrame with missing values handled.
-    """
     logger.info(f"FUNCTION START: handle_missing_values with dataframe shape={df.shape}")
     
     # Log missing values count before handling
@@ -124,21 +87,9 @@ def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 def remove_outliers(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Remove outliers based on thresholds.
-    This logic is very specific to the actual data and business rules.
-
-    Args:
-        df (pd.DataFrame): Input DataFrame.
-    
-    Returns:
-        pd.DataFrame: DataFrame with outliers removed.
-    """
     logger.info(f"FUNCTION START: remove_outliers with dataframe shape={df.shape}")
     initial_count = len(df)
-    
-    # TODO: Define numeric columns and apply rules for outlier removal
-    # Example:
+
     df = df[(df['LastActiveYear'] >= 2021) & (df['LastActiveYear'] <= 2025)]
     
     removed_count = initial_count - len(df)
@@ -148,9 +99,6 @@ def remove_outliers(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def main() -> None:
-    """
-    Main function for processing customer data.
-    """
     logger.info("==================================")
     logger.info("STARTING prepare_customers_data.py")
     logger.info("==================================")
@@ -159,12 +107,9 @@ def main() -> None:
     logger.info(f"data / raw folder: {RAW_DATA_DIR}")
     logger.info(f"data / prepared folder: {PREPARED_DATA_DIR}")
     logger.info(f"scripts folder: {PROJECT_ROOT.joinpath('scripts')}")
-
-    input_file = "customers_data.csv"
-    output_file = "customers_data_prepared.csv"
     
     # Read raw data
-    df = read_raw_data(input_file)
+    df = read_raw_data("customers_data.csv")
 
     # Log initial dataframe information
     logger.info(f"Initial dataframe columns: {', '.join(df.columns.tolist())}")
@@ -189,7 +134,7 @@ def main() -> None:
     df = remove_outliers(df)
 
     # Save prepared data
-    save_prepared_data(df, output_file)
+    save_prepared_data(df, "customers_data_prepared.csv")
 
     logger.info("==================================")
     logger.info("FINISHED prepare_customers_data.py")

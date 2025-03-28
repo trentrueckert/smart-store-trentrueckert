@@ -62,6 +62,7 @@ def main() -> None:
     df = remove_outliers(df)
     df = standardize_formats(df)
     
+    save_prepared_data(df, "sales_data_prepared.csv")
     logger.info("Finished prepare_sales_data.py")
 
 if __name__ == "__main__":
