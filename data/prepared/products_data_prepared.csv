@@ -1,4 +1,4 @@
-ProductID,ProductName,Category,UnitPrice,StockQuantity,StoreSection
+product_id,product_name,category,unit_price,stock_quantity,store_section
 101,laptop,Electronics,793.12,37,A
 102,hoodie,Clothing,39.1,82,B
 103,cable,Electronics,22.76,109,A

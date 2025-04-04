@@ -52,6 +52,7 @@ def create_schema(cursor: sqlite3.Cursor) -> None:
             customer_id INTEGER,
             product_id INTEGER,
             store_id INTEGER,
+            campaign_id INTEGER,
             sale_amount REAL,
             sale_date TEXT,
             discount_percent REAL,
