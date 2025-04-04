@@ -57,14 +57,16 @@ py scripts/data_prep.py
 
 -----
 
-## Add Additional Data
+## Project 3
+
+### Add Additional Data
 1. Add additional columns:
    1. Customers - LastActiveYear, PreferredContactMethod
    2. Products - StockQuantity, StoreSection
    3. Sales - DiscountPercent, PaymentType
 2. Load new data to the original raw file
 
-## Clean and Prepare the Data
+### Clean and Prepare the Data
 1. Create data prep scripts
    1. Create a subfolder 'data_preparation' in 'scripts'
    2. Create files in this subfolder for each raw file
@@ -79,7 +81,7 @@ py scripts/data_preparation/prepare_products_data.py
 py scripts/data_preparation/prepare_sales_data.py
 ```
 
-## Create Basic Data Scrubber
+### Create Basic Data Scrubber
 - The data is clean, but this will be more useful later
 1. Create 'data_scrubber.py' in the 'scripts' folder
 2. Create 'tests' folder with 'test_data_scrubber.py'
@@ -90,3 +92,21 @@ py tests/test_data_scrubber.py
 ```
 
 -----
+
+## Project 4
+
+### Design Data Warehouse
+- Choose the best schema design for the warehouse (we use star schema for this project)
+- Plan out the schema to show the structure of the database
+
+### Create the Data Warehouse
+- In the scripts folder, create the file etl_to_dw.py
+- Optional: Create a separate SQL file to verify/test the create_table statements
+- In the etl_to_dw.py file, copy and paste the code from the example repo and make the adjustments needed for the specific added columns from the prepared data
+
+### Run the Script to Create the Warehouse
+- The command for Windows:
+
+```
+py scripts/etl_to_dw.py
+```
