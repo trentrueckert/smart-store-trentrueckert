@@ -110,3 +110,19 @@ py tests/test_data_scrubber.py
 ```
 py scripts/etl_to_dw.py
 ```
+
+## Project 5
+1. Describe your SQL queries and reports:
+   1. We use various charts and graphs to show trends in our datasets with the SQL queries and reports detailed from our instructions
+   2. Slicer for sale date range
+   3. A matrix for total sale amount by category and region
+   4. A clustered column chart for total sale amount by year, quarter, month
+   5. A line chart for sales trends
+   6. A bar chart for Top Customers
+   7. A slicer for category
+   8. A slicer for region
+2. Explain dashboard design choices:
+   1. I tried to keep the slicers towards the outside and the visualizations more to the middle
+3. Include screenshot of Power BI Model View / Spark SQL Schema: ![Power BI Model View](C:\Users\trent\OneDrive\Pictures\Screenshots 1\PowerBIModelView.png)
+4. Include screenshot of Query results: ![Query Results](C:\Users\trent\OneDrive\Pictures\Screenshots 1\QueriesP5.png)
+5. Include screenshot of Final Dashboard / Charts: ![Final Dashboard](C:\Users\trent\OneDrive\Pictures\Screenshots 1\DashboardP5.png)
