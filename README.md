@@ -123,6 +123,6 @@ py scripts/etl_to_dw.py
    8. A slicer for region
 2. Explain dashboard design choices:
    1. I tried to keep the slicers towards the outside and the visualizations more to the middle
-3. Include screenshot of Power BI Model View / Spark SQL Schema: ![Power BI Model View](C:\Users\trent\OneDrive\Pictures\Screenshots 1\PowerBIModelView.png)
-4. Include screenshot of Query results: ![Query Results](C:\Users\trent\OneDrive\Pictures\Screenshots 1\QueriesP5.png)
-5. Include screenshot of Final Dashboard / Charts: ![Final Dashboard](C:\Users\trent\OneDrive\Pictures\Screenshots 1\DashboardP5.png)
+3. Include screenshot of Power BI Model View / Spark SQL Schema: ![Power BI Model View]("C:\Users\trent\OneDrive\Pictures\Screenshots 1\PowerBIModelView.png")
+4. Include screenshot of Query results: ![Query Results]("C:\Users\trent\OneDrive\Pictures\Screenshots 1\QueriesP5.png")
+5. Include screenshot of Final Dashboard / Charts: ![Final Dashboard]("C:\Users\trent\OneDrive\Pictures\Screenshots 1\DashboardP5.png")
