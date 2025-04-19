@@ -111,6 +111,8 @@ py tests/test_data_scrubber.py
 py scripts/etl_to_dw.py
 ```
 
+-----
+
 ## Project 5
 1. Describe your SQL queries and reports:
    1. We use various charts and graphs to show trends in our datasets with the SQL queries and reports detailed from our instructions
@@ -126,3 +128,50 @@ py scripts/etl_to_dw.py
 3. Include screenshot of Power BI Model View / Spark SQL Schema: ![Power BI Model View](images/PowerBIModelView.png)
 4. Include screenshot of Query results: ![Query Results](images/QueriesP5.png)
 5. Include screenshot of Final Dashboard / Charts: ![Final Dashboard](images/DashboardP5.png)
+
+-----
+
+## Project 6
+### Section 1: The Business Goal
+* The business goal here is to analyze the sales trends by region and year/month to see which products sell the best, and to decide whether to increase or decrease the number of each product based on the results. If products are not selling in certain regions or certain times of the year, the business could do further analysis on why to see if it is worth it to keep supplying the same amount of products, and vice versa for if they are selling well.
+
+### Section 2: Data Source
+* I used olap_cubing.py to generate an OLAP cube from sales data stored in my SQLite database (smart_sales.db).
+* From the sale table, I used: Year and Month (extracted from sale_date), sale_amount_sum (changed to total_sales), and sale_id_count.
+* From the product table, I used: product_name.
+* From the customer table. I used: region.
+
+### Section 3: Tools
+* I used some of the framework from (https://github.com/denisecase/smart-sales-olap/blob/main/scripts/olap_cubing.py) for my olap_cubing.py file.
+* I used some of the framework from (https://github.com/denisecase/smart-sales-olap/blob/main/scripts/olap_goal_top_product_by_day.py) as well to get going on my olap_goal files.
+* ChatGPT was utilized a bit to iron out any kinks in the olap_goal files.
+
+### Section 4: Workflow & Logic
+#### Dimensions
+* The dimensions I used were Year, Month, region, and product_name.
+
+#### Aggregations
+* For total sales, I used the sum of sales and grouped it by Year, Month, region, and product_name.
+* For the number of sales, I used the count of sales_id and grouped it by the the same as above. 
+
+#### Logic
+* To calculate the top products by month and region, I grouped the total sales by month and region and took a head of the top 3 products per month per region. The bar chart depicts these well.
+* To calculate the top product volumn by region, I took the same approach but also grouped month and year together to showed a drilled-down heatmap, as well as a bar chart. 
+
+### Section 5-6: Results and Suggested Business Action
+* The results of the top products by total sales show not extremely surprising results, with laptops leading in 3 of 4 regions. This is to be expected as they are the most expensive product from the data. Overall, there is not much spending across all of the regions, and particularly so in the North. 
+* The results of the top products by sale counts bar chart is fairly sporadic with not many noticeable trends except for one that stood out to me: jacket purchases in August. This makes sense because in most of the represented regions, it tends to get colder just after August. 
+* The heatmap for top products by sale counts is the best overall visual in my opinion. It gives great detail on which months and regions are the most products are purchased in, with the East far and away having the most. I find it interesting that there were hardly any in October. I wish there were some in November or December, as analyzing Christmas purchasing could be huge.
+* I would recommend further research on why the North wasn't purchasing much at all, and for data that includes November and December.
+
+![Top Products Total Sales by Month and Region](data/results/top_products_by_region_month.png)
+
+![Top Products Sale Amounts by Month and Region Bar Chart](data/results/top_products_by_sales_counts_month.png)
+
+![Top Products Sale Amounts by Month and Region Heatmap](data/results/sales_heatmap_region_year.png)
+
+### Section 7: Challenges
+* I had some challenges with getting the graphs to be able to present how I wanted.
+  * ChatGPT helped me fix a couple of minor errors.
+* I had an issue getting my scripts to run at first.
+  * I changed the format of the command I was using and had no further issues.

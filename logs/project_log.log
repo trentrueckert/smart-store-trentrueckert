@@ -152,3 +152,100 @@
 2025-03-28 00:07:25.831 | INFO     | __main__:main:139 - ==================================
 2025-03-28 00:07:25.831 | INFO     | __main__:main:140 - FINISHED prepare_customers_data.py
 2025-03-28 00:07:25.831 | INFO     | __main__:main:141 - ==================================
+2025-04-18 22:23:12.640 | INFO     | __main__:main:117 - Starting OLAP Cubing process...
+2025-04-18 22:23:12.644 | INFO     | __main__:ingest_sales_data_from_dw:33 - Sales data (with region and product_name) successfully loaded from SQLite data warehouse.
+2025-04-18 22:23:12.666 | INFO     | __main__:create_olap_cube:70 - OLAP cube created with dimensions: ['Year', 'Month', 'region', 'product_name']
+2025-04-18 22:23:12.681 | INFO     | __main__:write_cube_to_csv:109 - OLAP cube saved to data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-18 22:23:12.690 | INFO     | __main__:main:141 - OLAP Cubing process completed successfully.
+2025-04-18 22:23:12.693 | INFO     | __main__:main:142 - Please see outputs in data\olap_cubing_outputs
+2025-04-18 22:41:55.428 | INFO     | __main__:main:77 - Starting TOP_PRODUCTS_BY_REGION analysis...
+2025-04-18 22:41:55.433 | INFO     | __main__:load_olap_cube:26 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-18 22:41:55.437 | INFO     | __main__:analyze_top_products_by_region:45 - Top-selling products by region identified successfully.
+2025-04-18 22:41:55.459 | INFO     | __main__:main:88 - Top products by region saved to data\results\top_products_by_region_year.csv.
+2025-04-18 22:41:56.798 | INFO     | __main__:visualize_top_products_by_region:68 - Visualization saved to data\results\top_products_by_region_year.png.
+2025-04-18 22:49:25.878 | INFO     | __main__:main:77 - Starting TOP_PRODUCTS_BY_REGION analysis...
+2025-04-18 22:49:25.884 | INFO     | __main__:load_olap_cube:26 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-18 22:49:25.889 | INFO     | __main__:analyze_top_products_by_region:45 - Top-selling products by region identified successfully.
+2025-04-18 22:49:25.893 | INFO     | __main__:main:88 - Top products by region saved to data\results\top_products_by_region_month.csv.
+2025-04-18 22:49:26.800 | INFO     | __main__:visualize_top_products_by_region:68 - Visualization saved to data\results\top_products_by_region_month.png.
+2025-04-18 22:54:07.232 | INFO     | __main__:main:79 - Starting LOWEST_PRODUCTS_BY_REGION_YEAR analysis...
+2025-04-18 22:54:07.236 | INFO     | __main__:load_olap_cube:26 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-18 22:54:07.239 | INFO     | __main__:analyze_worst_products_by_region:47 - Lowest-selling products by region identified successfully.
+2025-04-18 22:54:07.242 | INFO     | __main__:main:90 - Lowest-selling products by region saved to data\results\lowest_products_by_region_year.csv.
+2025-04-18 22:54:07.682 | INFO     | __main__:visualize_lowest_products_by_region:70 - Visualization saved to data\results\lowest_products_by_region_year.png.
+2025-04-18 22:54:17.340 | INFO     | __main__:main:95 - Analysis and visualization of bottom-selling products completed successfully.
+2025-04-18 22:56:18.399 | INFO     | __main__:main:79 - Starting LOWEST_PRODUCTS_BY_REGION_MONTH analysis...
+2025-04-18 22:56:18.406 | INFO     | __main__:load_olap_cube:26 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-18 22:56:18.416 | INFO     | __main__:analyze_worst_products_by_region:47 - Lowest-selling products by region identified successfully.
+2025-04-18 22:56:18.423 | INFO     | __main__:main:90 - Lowest-selling products by region saved to data\results\lowest_products_by_region_month.csv.
+2025-04-18 22:56:19.384 | INFO     | __main__:visualize_lowest_products_by_region:70 - Visualization saved to data\results\lowest_products_by_region_month.png.
+2025-04-18 22:56:42.286 | INFO     | __main__:main:95 - Analysis and visualization of bottom-selling products completed successfully.
+2025-04-18 23:00:41.131 | INFO     | __main__:main:77 - Starting TOP_PRODUCTS_BY_REGION analysis...
+2025-04-18 23:00:41.137 | INFO     | __main__:load_olap_cube:26 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-18 23:00:41.143 | INFO     | __main__:analyze_top_products_by_region:45 - Top-selling products by region identified successfully.
+2025-04-18 23:00:41.157 | INFO     | __main__:main:88 - Top products by region saved to data\results\top_products_by_region_month.csv.
+2025-04-18 23:00:42.182 | INFO     | __main__:visualize_top_products_by_region:68 - Visualization saved to data\results\top_products_by_region_month.png.
+2025-04-18 23:02:08.511 | INFO     | __main__:main:93 - Analysis and visualization of top-selling products completed successfully.
+2025-04-18 23:03:15.522 | INFO     | __main__:main:77 - Starting TOP_PRODUCTS_BY_REGION analysis...
+2025-04-18 23:03:15.526 | INFO     | __main__:load_olap_cube:26 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-18 23:03:15.532 | INFO     | __main__:analyze_top_products_by_region:45 - Top-selling products by region identified successfully.
+2025-04-18 23:03:15.536 | INFO     | __main__:main:88 - Top products by region saved to data\results\top_products_by_region_month.csv.
+2025-04-18 23:03:16.434 | INFO     | __main__:visualize_top_products_by_region:68 - Visualization saved to data\results\top_products_by_region_month.png.
+2025-04-18 23:03:23.899 | INFO     | __main__:main:93 - Analysis and visualization of top-selling products completed successfully.
+2025-04-18 23:08:43.783 | INFO     | __main__:main:76 - Starting TOP_PRODUCTS_BY_REGION analysis...
+2025-04-18 23:08:43.788 | INFO     | __main__:load_olap_cube:26 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-18 23:08:43.794 | INFO     | __main__:analyze_top_products_by_region:44 - Top-selling products by region identified successfully.
+2025-04-18 23:08:43.801 | INFO     | __main__:main:87 - Top products by region saved to data\results\top_products_by_region_month.csv.
+2025-04-18 23:08:44.961 | INFO     | __main__:visualize_top_products_by_region:67 - Visualization saved to data\results\top_products_by_region_month.png.
+2025-04-18 23:10:52.732 | INFO     | __main__:main:92 - Analysis and visualization of top-selling products completed successfully.
+2025-04-18 23:11:15.246 | INFO     | __main__:main:74 - Starting TOP_PRODUCTS_BY_REGION analysis...
+2025-04-18 23:11:15.251 | INFO     | __main__:load_olap_cube:26 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-18 23:11:15.252 | ERROR    | __main__:analyze_top_products_by_region:45 - Error analyzing top products by region: 'total_sales'
+2025-04-18 23:13:31.123 | INFO     | __main__:main:77 - Starting TOP_PRODUCTS_BY_REGION analysis...
+2025-04-18 23:13:31.128 | INFO     | __main__:load_olap_cube:26 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-18 23:13:31.131 | INFO     | __main__:analyze_top_products_by_region:45 - Top products by region and month identified successfully.
+2025-04-18 23:13:31.136 | INFO     | __main__:main:88 - Top products by region saved to data\results\top_products_by_region_month.csv.
+2025-04-18 23:13:32.003 | INFO     | __main__:visualize_top_products_by_region:68 - Visualization saved to data\results\top_products_by_region_month.png.
+2025-04-18 23:14:55.779 | INFO     | __main__:main:93 - Analysis and visualization of top-selling products completed successfully.
+2025-04-18 23:16:08.022 | INFO     | __main__:main:77 - Starting TOP_PRODUCTS_BY_REGION analysis...
+2025-04-18 23:16:08.029 | INFO     | __main__:load_olap_cube:26 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-18 23:16:08.035 | INFO     | __main__:analyze_top_products_by_region:45 - Top products by region and month identified successfully.
+2025-04-18 23:16:08.043 | INFO     | __main__:main:88 - Top products by region saved to data\results\top_products_by_region_month.csv.
+2025-04-18 23:16:08.935 | INFO     | __main__:visualize_top_products_by_region:68 - Visualization saved to data\results\top_products_by_region_month.png.
+2025-04-18 23:16:22.439 | INFO     | __main__:main:93 - Analysis and visualization of top-selling products completed successfully.
+2025-04-18 23:20:39.796 | INFO     | __main__:main:117 - Starting OLAP Cubing process...
+2025-04-18 23:20:39.801 | INFO     | __main__:ingest_sales_data_from_dw:33 - Sales data (with region and product_name) successfully loaded from SQLite data warehouse.
+2025-04-18 23:20:39.831 | INFO     | __main__:create_olap_cube:70 - OLAP cube created with dimensions: ['Year', 'Month', 'region', 'product_name']
+2025-04-18 23:20:39.837 | INFO     | __main__:write_cube_to_csv:109 - OLAP cube saved to data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-18 23:20:39.838 | INFO     | __main__:main:141 - OLAP Cubing process completed successfully.
+2025-04-18 23:20:39.839 | INFO     | __main__:main:142 - Please see outputs in data\olap_cubing_outputs
+2025-04-18 23:21:17.348 | INFO     | __main__:main:77 - Starting TOP_PRODUCTS_BY_REGION analysis...
+2025-04-18 23:21:17.353 | INFO     | __main__:load_olap_cube:26 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-18 23:21:17.356 | INFO     | __main__:analyze_top_products_by_region:45 - Top products by region and month identified successfully.
+2025-04-18 23:21:17.362 | INFO     | __main__:main:88 - Top products by region saved to data\results\top_products_by_region_month.csv.
+2025-04-18 23:21:18.235 | INFO     | __main__:visualize_top_products_by_region:68 - Visualization saved to data\results\top_products_by_region_month.png.
+2025-04-18 23:21:28.623 | INFO     | __main__:main:93 - Analysis and visualization of top-selling products completed successfully.
+2025-04-18 23:23:47.820 | INFO     | __main__:main:79 - Starting TOP_PRODUCTS_BY_REGION analysis...
+2025-04-18 23:23:47.823 | INFO     | __main__:load_olap_cube:26 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-18 23:23:47.825 | INFO     | __main__:analyze_top_products_by_region:47 - Top-selling products by region and month identified successfully.
+2025-04-18 23:23:47.828 | INFO     | __main__:main:90 - Top products by region saved to data\results\top_products_by_region_month.csv.
+2025-04-18 23:23:48.251 | INFO     | __main__:visualize_top_products_by_region:70 - Visualization saved to data\results\top_products_by_region_month.png.
+2025-04-18 23:23:51.372 | INFO     | __main__:main:95 - Analysis and visualization of top-selling products completed successfully.
+2025-04-18 23:25:53.803 | INFO     | __main__:main:79 - Starting TOP_PRODUCTS_BY_REGION analysis...
+2025-04-18 23:25:53.806 | INFO     | __main__:load_olap_cube:26 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-18 23:25:53.808 | INFO     | __main__:analyze_top_products_by_region:47 - Top-selling products by region and month identified successfully.
+2025-04-18 23:25:53.811 | INFO     | __main__:main:90 - Top products by region saved to data\results\top_products_by_region_month.csv.
+2025-04-18 23:25:54.238 | INFO     | __main__:visualize_top_products_by_region:70 - Visualization saved to data\results\top_products_by_region_month.png.
+2025-04-18 23:26:05.143 | INFO     | __main__:main:95 - Analysis and visualization of top-selling products completed successfully.
+2025-04-18 23:30:07.592 | INFO     | __main__:main:79 - Starting LOWEST_PRODUCTS_BY_REGION_MONTH analysis...
+2025-04-18 23:30:07.595 | INFO     | __main__:load_olap_cube:26 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-18 23:30:07.597 | INFO     | __main__:analyze_worst_products_by_region:47 - Lowest-selling products by region and month identified successfully.
+2025-04-18 23:30:07.599 | INFO     | __main__:main:90 - Lowest-selling products by region saved to data\results\lowest_products_by_region_month.csv.
+2025-04-18 23:30:08.026 | INFO     | __main__:visualize_lowest_products_by_region:70 - Visualization saved to data\results\lowest_products_by_region_month.png.
+2025-04-18 23:32:08.812 | INFO     | __main__:main:100 - Starting SALE_COUNT_BY_REGION_YEAR analysis...
+2025-04-18 23:32:08.815 | INFO     | __main__:load_olap_cube:26 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-18 23:32:08.817 | INFO     | __main__:analyze_top_products_by_volume:41 - Top products by volume identified successfully.
+2025-04-18 23:32:08.818 | INFO     | __main__:main:111 - Top volume products saved to data\results\top_volume_products_by_region_year.csv.
+2025-04-18 23:32:09.128 | INFO     | __main__:visualize_top_products_by_sales_count:66 - Top products by sales count grouped bar chart saved to data\results\top_products_by_sales_count_month.png.
+2025-04-18 23:32:38.950 | INFO     | __main__:visualize_sale_counts_heatmap:91 - Sales heatmap saved to data\results\sales_heatmap_region_year.png.
+2025-04-18 23:32:55.966 | INFO     | __main__:main:119 - Grouped bar chart and heatmap analysis of sale counts completed successfully.

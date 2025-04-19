@@ -20,19 +20,20 @@ OLAP_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def ingest_sales_data_from_dw() -> pd.DataFrame:
-    """Ingest sales data from SQLite data warehouse and join with customer info."""
+    """Ingest sales data from SQLite data warehouse and join with customer and product info."""
     try:
         conn = sqlite3.connect(DB_PATH)
         sales_df = pd.read_sql_query("""
-            SELECT s.*, c.region
+            SELECT s.*, c.region, p.product_name
             FROM sale s
             JOIN customer c ON s.customer_id = c.customer_id
+            JOIN product p ON s.product_id = p.product_id
         """, conn)
         conn.close()
-        logger.info("Sales data (with region) successfully loaded from SQLite data warehouse.")
+        logger.info("Sales data (with region and product_name) successfully loaded from SQLite data warehouse.")
         return sales_df
     except Exception as e:
-        logger.error(f"Error loading sale + customer data from data warehouse: {e}")
+        logger.error(f"Error loading sale + customer + product data from data warehouse: {e}")
         raise
 
 

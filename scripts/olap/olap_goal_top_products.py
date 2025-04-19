@@ -31,39 +31,41 @@ def load_olap_cube(file_path: pathlib.Path) -> pd.DataFrame:
 
 
 def analyze_top_products_by_region(cube_df: pd.DataFrame) -> pd.DataFrame:
-    """Identify the top-selling product in each region based on total sales."""
+    """
+    Identify the top-selling products by region and month, based on total sales.
+    """
     try:
-        # Sort by year, region, and total sales descending
-        sorted_df = cube_df.sort_values(by=["Year", "region", "sale_amount_sum"], ascending=[True, True, False])
+        # Rename for clarity
+        cube_df = cube_df.rename(columns={"sale_amount_sum": "total_sales"})
 
-        # Rename sale_amount_sum
-        sorted_df.rename(columns={"sale_amount_sum": "total_sales"}, inplace=True)
-       
-        # Get the top products per year and region
-        top_products = sorted_df.groupby(["Year", "region", "product_name"]).head(3).reset_index(drop=True)
+        # Sort descending by total sales
+        sorted_df = cube_df.sort_values(by=["region", "Month", "total_sales"], ascending=[True, True, False])
 
-        logger.info("Top-selling products by region identified successfully.")
+        # Group by region and month ONLY, then take top 3
+        top_products = sorted_df.groupby(["region", "Month"]).head(3).reset_index(drop=True)
+
+        logger.info("Top-selling products by region and month identified successfully.")
         return top_products
     except Exception as e:
-        logger.error(f"Error analyzing top-selling products by region: {e}")
+        logger.error(f"Error identifying top products by region: {e}")
         raise
 
 
 def visualize_top_products_by_region(top_products: pd.DataFrame) -> None:
-    """Visualize the top-selling product by region and year."""
+    """Visualize the top-selling product by region and month."""
     try:
-        # Plot: grouped bar by region + year
+        # Plot: grouped bar by region + month
         plt.figure(figsize=(10, 6))
-        sns.barplot(data=top_products, x="region", y="total_sales", hue="Year", hue_order=sorted(top_products["Year"].unique()), palette="viridis")
+        sns.barplot(data=top_products, x="region", y="total_sales", hue="product_name", palette="viridis")
 
-        plt.title("Top-Selling Products by Region and Year")
+        plt.title("Top-Selling Products by Region and Month")
         plt.xlabel("Region")
         plt.ylabel("Total Sales")
         plt.xticks(rotation=45)
         plt.tight_layout()
 
         # Save the visualization
-        output_path = RESULTS_OUTPUT_DIR.joinpath("top_products_by_region_year.png")
+        output_path = RESULTS_OUTPUT_DIR.joinpath("top_products_by_region_month.png")
         plt.savefig(output_path)
         logger.info(f"Visualization saved to {output_path}.")
         plt.show()
@@ -73,7 +75,7 @@ def visualize_top_products_by_region(top_products: pd.DataFrame) -> None:
 
 
 def main():
-    """Main function for analyzing and visualizing top-selling products by region and year."""
+    """Main function for analyzing and visualizing top-selling products by region and month."""
     logger.info("Starting TOP_PRODUCTS_BY_REGION analysis...")
 
     # Step 1: Load the precomputed OLAP cube
@@ -83,7 +85,7 @@ def main():
     top_products = analyze_top_products_by_region(cube_df)
 
     # Step 3: Save top products as CSV
-    top_csv = RESULTS_OUTPUT_DIR.joinpath("top_products_by_region_year.csv")
+    top_csv = RESULTS_OUTPUT_DIR.joinpath("top_products_by_region_month.csv")
     top_products.to_csv(top_csv, index=False)
     logger.info(f"Top products by region saved to {top_csv}.")
 
