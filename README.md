@@ -175,3 +175,32 @@ py scripts/etl_to_dw.py
   * ChatGPT helped me fix a couple of minor errors.
 * I had an issue getting my scripts to run at first.
   * I changed the format of the command I was using and had no further issues.
+
+-----
+
+## Final Project
+### Section 1. The Business Goal
+My business goal was to identify the top-selling product categories by month.
+
+### Section 2. Data Source
+I used the ODBC option in get data in Power BI to import my customer, sale, and product tables, as well as creating a top categories table with category, sale_amount_sum, and sale_id_count. 
+
+### Section 3. Tools Used
+I used Power BI and Power Query Editor within Power BI.
+
+### Section 4. Workflow & Logic
+I used Power BI to load the database and transform certain things such as creating a year, month name, and month column to be utilized in different charts or graphs. To get the aforementioned columns, I had to change the data type for my sale_date column from text to date. I populated my dashboard with various chart types: a clustered column chart for Sum of Sale Amount by Category and Month (with drill-down capabilities to product name), a pie chart for Sale Amount by Month, a line chart for Sale ID Counts by Month and Category, a matrix for Sale Amount by Category and Month, and a slicer to choose between categories. 
+
+### Section 5. Results (narrative + visualizations)
+![Final Project Dashboard](images/FinalProjectDashboard.png)
+
+Not surprisingly, electronics had the highest amount of sales likely due to their higher product costs, followed not closely at all by clothing, and then sports. There are some factors to consider based on these results: sports only having one item in the dataset that is sold, the price of electronics being higher and having more options, etc. Overall, the best selling months were July, April, and February. The number of sales made for electronics and clothing by month was very up and down, hard to identify any trends. February was a top 3 selling month for all 3 categories. Overall, it is hard to identify many trends because of the domination of electronics.
+
+### Section. 6 Suggested Business Action
+Based on my analysis, I recommend a boost in the electronics stock due to the massive amount of money the business has brought in from them already. I also recommend a boost in clothing because while not bringing in as much money as electronics, clothing is very close in total sales to electronics, so people are buying a lot of clothing in general. Also some advertisements for both of them would be smart, and maybe a discount in the sporting category. I would also recommend some more analysis on why July, April, and February have the most sales and create promotions around this.
+
+### Section 7. Challenges
+I had a little bit of trouble early on trying to use a SQL statement when loading the data to try and change the sale_date column to get a year and month out of it. I resolved it by loading the data as it was, then going in and transforming it with Power Query Editor by adding new columns. 
+
+### Section 8. Ethical Considerations
+Making sure that the data is not biased towards one category, like the already likely over-represented electronics category or under-represented sporting category. I also have tried to be very transparent about my findings and where I think the business could imporove. The data seems like it could be incomplete as well, as is does not include November or December data, and overall there isn't much in the dataset to begin with.
